@@ -1,11 +1,11 @@
-FROM prosisstha/funny-jokes-cli:latest
+FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Install express for server
-RUN npm install -g express
+# Install CLI and express
+RUN npm install -g funny-jokes-cli express
 
-# Add server code
+# Copy server script
 COPY server.js .
 
 EXPOSE 3000
