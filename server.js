@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  exec("/usr/local/bin/joke", (err, stdout) => {
+  exec("node_modules/.bin/joke", (err, stdout) => {
     if (err) {
       console.error("Error running joke CLI:", err);
       return res.status(500).send("Error running joke CLI");
