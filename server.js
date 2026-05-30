@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
       console.error("Error running joke CLI:", err);
       return res.status(500).send("Error running joke CLI");
     }
-    res.send(`<pre>${stdout}</pre>`);
+    res.send(`<pre>${stdout}</pre>\n<p>version 2</p>`);
   });
 });
 
